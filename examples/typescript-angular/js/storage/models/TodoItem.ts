@@ -1,12 +1,12 @@
-/// <reference path='../_all.ts' />
+/// <reference path='../../_all.ts' />
 
-module todos {
-    'use strict';
+// module todos {
+//     'use strict';
 
-    export class TodoItem {
-        constructor(
-            public title: string,
-            public completed: boolean
-            ) { }
-    }
-}
+//     export class TodoItem {
+//         constructor(
+//             public title: string,
+//             public completed: boolean
+//             ) { }
+//     }
+// }

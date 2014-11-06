@@ -1,0 +1,13 @@
+module todos.storage
+
+interface ITodoStorage {
+    TodoItem[] get()
+    void put(TodoItem[] todos)
+}
+
+struct TodoItem {
+    string title
+    bool completed    
+}
+
+ITodoStorage createStorage()

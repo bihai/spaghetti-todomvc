@@ -1,6 +1,6 @@
-/// <reference path='../_all.ts' />
+/// <reference path='../../_all.ts' />
 
-module todos {
+module todos.ui {
 	'use strict';
 
 	/**
@@ -10,7 +10,7 @@ module todos {
 	 */
 	export class TodoCtrl {
 
-		private todos: TodoItem[];
+		private todos: todos.storage.TodoItem[];
 
 		// $inject annotation.
 		// It provides $injector with information about dependencies to be injected into constructor
@@ -28,7 +28,7 @@ module todos {
 		constructor(
 			private $scope: ITodoScope,
 			private $location: ng.ILocationService,
-			private todoStorage: ITodoStorage,
+			private todoStorage: todos.storage.ITodoStorage,
 			private filterFilter
 		) {
 			this.todos = $scope.todos = todoStorage.get();
@@ -68,15 +68,15 @@ module todos {
 				return;
 			}
 
-			this.todos.push(new TodoItem(newTodo, false));
+			this.todos.push({ title: newTodo, completed: false });
 			this.$scope.newTodo = '';
 		}
 
-		editTodo(todoItem: TodoItem) {
+		editTodo(todoItem: todos.storage.TodoItem) {
 			this.$scope.editedTodo = todoItem;
 		}
 
-		doneEditing(todoItem: TodoItem) {
+		doneEditing(todoItem: todos.storage.TodoItem) {
 			this.$scope.editedTodo = null;
 			todoItem.title = todoItem.title.trim();
 			if (!todoItem.title) {
@@ -84,7 +84,7 @@ module todos {
 			}
 		}
 
-		removeTodo(todoItem: TodoItem) {
+		removeTodo(todoItem: todos.storage.TodoItem) {
 			this.todos.splice(this.todos.indexOf(todoItem), 1);
 		}
 

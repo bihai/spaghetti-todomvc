@@ -1,6 +1,6 @@
-/// <reference path='../_all.ts' />
+/// <reference path='../../_all.ts' />
 
-module todos {
+module todos.ui {
     'use strict';
 
     /**

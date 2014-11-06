@@ -1,10 +1,10 @@
-/// <reference path='../_all.ts' />
+/// <reference path='../../_all.ts' />
 
-module todos {
+module todos.ui {
 	export interface ITodoScope extends ng.IScope {
-		todos: TodoItem[];
+		todos: todos.storage.TodoItem[];
 		newTodo: string;
-		editedTodo: TodoItem;
+		editedTodo: todos.storage.TodoItem;
 		remainingCount: number;
 		doneCount: number;
 		allChecked: boolean;

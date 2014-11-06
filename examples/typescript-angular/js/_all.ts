@@ -1,5 +1,6 @@
 /// <reference path='storage/models/TodoItem.ts' />
 /// <reference path='storage/services/TodoStorage.ts' />
+/// <reference path='storage/StorageModuleImpl.ts' />
 /// <reference path='storage/headers/Spaghetti.ts' />
 /// <reference path='storage/headers/StorageModule.ts' />
 
