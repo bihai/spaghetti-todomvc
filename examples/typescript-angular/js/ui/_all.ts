@@ -5,7 +5,7 @@
 /// <reference path='directives/TodoBlur.ts' />
 /// <reference path='controllers/TodoCtrl.ts' />
 /// <reference path='Application.ts' />
-/// <reference path='build/headers/StorageModule.ts' />
-/// <reference path='build/headers/UiModule.ts' />
+/// <reference path='build/headers/todos/storage/StorageModule.ts' />
+/// <reference path='build/headers/todos/ui/UiModule.ts' />
 /// <reference path='UiModule.ts' />
 
