@@ -84,9 +84,23 @@ A standalone TypeScript compiler is available on NPM.
 
 	npm install -g typescript
 
-To compile the TypeScript in this project:
+You will also need [Grunt](http://gruntjs.com).
 
-	# from labs/architecture-examples/typescript-angular
-	tsc --sourcemap --out js/Application.js js/_all.ts
+	npm install -g grunt
 
-Or use Visual Studio with the TypeScript plugin.
+Now you can run the Grunt build.
+
+	grunt
+
+Grunt will do the following:
+
+* install the Kotlin compiler,
+* generate the Kotlin "headers" for Storage from the Spaghetti module definition,
+* compile the Kotlin code in Storage module,
+* bundle it as a Spaghetti module,
+* generate the TypeScript "headers" for UI from the Spaghetti module definitions in the UI and Storage modules,
+* compile the TypeScript code in UI module,
+* bundle it as a Spaghetti module,
+* package the UI and Spaghetti modules into a RequireJS application.
+
+You can now open the `index.html` in your browser to see the application at work.
