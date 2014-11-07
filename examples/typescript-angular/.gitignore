@@ -4,3 +4,6 @@
 /obj
 build/
 .DS_Store
+
+*.js
+/modules/
